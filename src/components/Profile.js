@@ -1,12 +1,12 @@
 import React from 'react'
-import { getUser } from '../services/auth'
+import { getCookie } from 'tiny-cookie'
 
 const Profile = () => (
   <>
     <h1>Your profile</h1>
     <ul>
-      <li>Name: {getUser().name}</li>
-      <li>E-mail: {getUser().email}</li>
+      <li>Name: {getCookie('USER_NICKNAME')}</li>
+      <li>E-mail: {getCookie('USER_EMAIL')}</li>
     </ul>
   </>
 )

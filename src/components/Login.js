@@ -1,6 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import { handleLogin, isLoggedIn } from '../services/auth'
+import { Auth } from '../services/auth'
 
 class Login extends React.Component {
   state = {
@@ -20,7 +20,7 @@ class Login extends React.Component {
   }
 
   render() {
-    if (isLoggedIn()) {
+    if (Auth.isAuthenticated) {
       navigate(`/app/profile`)
     }
 

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { getUser, isLoggedIn } from '../services/auth'
+import { Auth } from '../services/auth'
 import 'antd/dist/antd.css'
 import Layout from '../components/Layout'
+import { getCookie } from 'tiny-cookie'
 
 // import { Button } from 'antd'
 // const StyledButton = styled(Button)`
@@ -11,19 +12,23 @@ import Layout from '../components/Layout'
 //   }
 // `
 
-const IndexPage = (props) => {
-  console.log({ props })
+const IndexPage = () => {
+  const handleAuth = (event) => {
+    event.preventDefault()
+    const auth = new Auth()
+    auth.login()
+  }
   return (
     <Layout style="background: white">
-      <h1>Hi {isLoggedIn() ? getUser().name : 'people'}</h1>
+      <h1>Hi {Auth.isAuthenticated() ? getCookie('USER_NICKNAME') : 'people'}</h1>
       <p>
-        {isLoggedIn() ? (
+        {Auth.isAuthenticated() ? (
           <>
             You are logged in, so check your <Link to="/app/profile">profile</Link>
           </>
         ) : (
           <>
-            You should <Link to="/app/login">log in</Link> to see restricted content
+            You should <a onClick={handleAuth}>log in</a> to see restricted content
           </>
         )}
       </p>
