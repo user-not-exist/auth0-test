@@ -4,10 +4,12 @@ class Hero extends React.Component {
   render() {
     return (
       <div className="Hero">
-        <h1>
-          Welcome <br />
-          to the <span>New You</span>
-        </h1>
+        <div className="wrap">
+          <h1>
+            Welcome <br />
+            to the <span>New You</span>
+          </h1>
+        </div>
       </div>
     )
   }

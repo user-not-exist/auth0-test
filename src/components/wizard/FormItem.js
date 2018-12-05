@@ -4,7 +4,8 @@ class FormItem extends React.Component {
   render() {
     return (
       <div className="FormItem">
-        <label htmlFor="name">Name</label> <input type="text" id="name" />
+        <label htmlFor={this.props.name}>{this.props.text}</label>{' '}
+        <input type={this.props.type} id={this.props.name} />
       </div>
     )
   }

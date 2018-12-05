@@ -7,7 +7,7 @@ class CountdownContent extends React.Component {
     return (
       <div className="CountdownContent">
         <CountdownTitle />
-        <CountdownTrackerItem />
+        <CountdownTrackerItem date="32" />
       </div>
     )
   }

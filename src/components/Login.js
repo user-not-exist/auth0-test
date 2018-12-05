@@ -36,13 +36,23 @@ class Login extends React.Component {
         >
           <label>
             Username (john)
-            <input type="text" name="username" onChange={this.handleUpdate} />
+            <input
+              style={{ width: 100 }}
+              type="text"
+              name="username"
+              onChange={this.handleUpdate}
+            />
           </label>
           <label>
             Password (pass)
-            <input type="password" name="password" onChange={this.handleUpdate} />
-          </label>
-          <input type="submit" value="Log In" />
+            <input
+              style={{ width: 100 }}
+              type="password"
+              name="password"
+              onChange={this.handleUpdate}
+            />
+          </label>{' '}
+          <input style={{ width: 100 }} type="submit" value="Log In" />
         </form>
       </>
     )

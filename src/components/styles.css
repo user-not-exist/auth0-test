@@ -1,0 +1,114 @@
+body {
+  background: url('../images/bg.jpg') no-repeat center;
+  background-size: cover;
+  font-family: arial;
+  min-width: 640px;
+}
+.Wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.CountdownWrap {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px 1px #d4d4d4;
+  min-height: 446px;
+  width: 524px;
+}
+.CountdownLogo {
+  display: block;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+.CountdownContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ff4613;
+  height: 190px;
+  width: 100%;
+}
+.CountdownTitle {
+  color: #fff;
+  font-size: 29px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+.CountdownTracker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.CountdownTrackerItem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #fff;
+  border: solid 2px #ff4613;
+  height: 142px;
+  width: 142px;
+}
+.CountdownTrackerItemValue {
+  color: #ff6b00;
+  font-size: 30px;
+  font-weight: normal;
+  padding-bottom: 30px;
+}
+.CountdownTrackerItemCount {
+  color: #4a4a4a;
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.RecoveryPassword {
+  margin: 0 45px;
+}
+.RecoveryPasswordTitle {
+  color: #4b4b4b;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.RecoveryPasswordText {
+  color: #4b4b4b;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 45px;
+}
+.RecoveryPasswordForm {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  color: #4b4b4b;
+}
+input {
+  border: solid 1px #cfcfcf;
+  border-radius: 3px;
+  outline: none;
+  margin-top: 15px;
+  padding: 14px;
+  width: 400px;
+}
+input:focus {
+  border-color: #ff6b00;
+}
+.ConfirmButton {
+  background: #ff4613;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  margin: 40px auto 50px;
+  padding: 15px 35px;
+}

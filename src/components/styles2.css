@@ -1,0 +1,169 @@
+.wrap {
+  min-width: 320px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.Header {
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Header .wrap__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Navigation {
+  position: relative;
+}
+
+.NavigationToggler {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 0;
+  background: url('../images/toggler.png');
+  border: 0;
+  cursor: pointer;
+}
+
+.NavigationList {
+  display: none;
+}
+
+.Logo {
+  display: block;
+  max-width: 70%;
+  line-height: 61px;
+}
+
+.Logo .Link {
+  display: flex;
+  align-items: center;
+}
+
+.Logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Profile {
+  position: relative;
+}
+
+.ProfilePhoto {
+  display: block;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background-color: azure;
+  overflow: hidden;
+}
+
+.ProfilePhoto img {
+  object-fit: cover;
+}
+
+.ProfileBadge {
+  position: absolute;
+  bottom: -5px;
+  right: -2px;
+  z-index: 5;
+  width: 20px;
+  height: 20px;
+  font: 14px sans-serif;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #ff4613;
+}
+
+.Hero {
+  min-height: 350px;
+  background: #8d2316 url('../images/hero-2-bg.jpg') no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.Hero h1 {
+  padding: 210px 5% 50px;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.Hero h1 span {
+  display: block;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 800px;
+  text-transform: uppercase;
+}
+
+.SetupSteps {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.SetupSteps p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.Step {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.Step a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d8d7d7;
+}
+.Step.step--active a {
+  background-color: #ff4613;
+}
+.Form {
+  background-color: #fff;
+}
+.FormPersonal {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.FormPersonal p {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.FormItem {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.FormItem label {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.FormItem input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
