@@ -39,7 +39,7 @@ export class Auth {
     }
   }
 
-  static isAuthenticated = () => !!getCookie(COOKIE.USER_TOKEN)
+  static isAuthenticated = () => typeof document !== 'undefined' && !!getCookie(COOKIE.USER_TOKEN)
 
   static logout = () => {
     removeCookie(COOKIE.USER_NICKNAME)

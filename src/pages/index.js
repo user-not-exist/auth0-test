@@ -5,13 +5,6 @@ import 'antd/dist/antd.css'
 import Layout from '../components/Layout'
 import { getCookie } from 'tiny-cookie'
 
-// import { Button } from 'antd'
-// const StyledButton = styled(Button)`
-//   && {
-//     border: 2px solid red;
-//   }
-// `
-
 const IndexPage = () => {
   const handleAuth = (event) => {
     event.preventDefault()
