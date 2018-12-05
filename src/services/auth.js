@@ -1,13 +1,13 @@
 import auth0 from 'auth0-js'
 import { navigateTo } from 'gatsby-link'
 import { setCookie, getCookie, removeCookie } from 'tiny-cookie'
-import { CLIENT_ID, DOMAIN, REDIRECT_URI } from '../constants'
+import { AUTH, COOKIE } from '../constants'
 
 export class Auth {
   auth0 = new auth0.WebAuth({
-    domain: DOMAIN,
-    clientID: CLIENT_ID,
-    redirectUri: REDIRECT_URI,
+    domain: AUTH.DOMAIN,
+    clientID: AUTH.CLIENT_ID,
+    redirectUri: AUTH.REDIRECT_URI,
     responseType: 'token id_token',
     scope: 'openid email profile',
   })
@@ -20,10 +20,14 @@ export class Auth {
     if (typeof window !== 'undefined') {
       this.auth0.parseHash((err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
-          setCookie('USER_TOKEN', authResult.accessToken, { expires: '30s' })
-          setCookie('USER_EMAIL', authResult.idTokenPayload.email, { expires: '30s' })
-          setCookie('USER_NICKNAME', authResult.idTokenPayload.nickname, {
-            expires: '30s',
+          setCookie(COOKIE.USER_TOKEN, authResult.accessToken, {
+            expires: COOKIE.EXPIRES_TIME_COOKIE,
+          })
+          setCookie(COOKIE.USER_EMAIL, authResult.idTokenPayload.email, {
+            expires: AUTH.EXPIRES_TIME_COOKIE,
+          })
+          setCookie(COOKIE.USER_NICKNAME, authResult.idTokenPayload.nickname, {
+            expires: AUTH.EXPIRES_TIME_COOKIE,
           })
         } else if (err) {
           console.log(err)
@@ -35,11 +39,11 @@ export class Auth {
     }
   }
 
-  static isAuthenticated = () => !!getCookie('USER_TOKEN')
+  static isAuthenticated = () => !!getCookie(COOKIE.USER_TOKEN)
 
   static logout = () => {
-    removeCookie('USER_NICKNAME')
-    removeCookie('USER_EMAIL')
-    removeCookie('USER_TOKEN')
+    removeCookie(COOKIE.USER_NICKNAME)
+    removeCookie(COOKIE.USER_EMAIL)
+    removeCookie(COOKIE.USER_TOKEN)
   }
 }
